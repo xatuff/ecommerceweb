@@ -1,0 +1,49 @@
+Connect-db2.php:
+1. Line 7 to 10 defines the database variables, such as the server address, username, password, and the name of the database to connect to. The server we use is localhost on Apache. Username is root while the password is blank is due to it's the default Credentials. $db stands for database name, in this coding our database is called "game"
+2. mysql_connect() function is used to establish a connection to the MySQL server with the variable we have been set. If the connection didn't work due to Apache isn't running or else, it will display message based on the "die" function.
+3. mysql_select_db($db) is used to connect the database that have been set, if there's no database called "game", it will execute the "die" function.
+
+delete2.php
+1.
+
+ob_start();
+
+This is a PHP function that starts output buffering by PHP that will  PHP starts buffering the output instead of immediately sending it to the browser. This function to modify an output immediately that can be view on browser in instant.
+
+2. include('connect-db2.php');:
+
+This statement is used to include the codings of the "connect-db2.php" which is used to login PHP admin. $_GET superglobal is an associative array that holds variables passed through the URL.
+
+3. if (isset($_GET['id']) && is_numeric($_GET['id'])) 
+
+This statement is to get the ID that we wanted to delete, we use $_GET because it's not a form to gather many output, it just needs the ID to proceed. is_numeric is to make sure that the ID we wanted to delete is number
+
+4. $result = mysql_query("DELETE FROM record WHERE id=$id") or die(mysql_error());
+
+executes an SQL DELETE statement to remove the record from the 'record' table where the 'id' based on $_GET['id']
+
+5. header("Location: view2.php")
+
+When all the codings have been executed, "header" function will redirect user to a page called view2.php
+ 
+6. In case ID is invalid, it will redirect user to view2.php but there will be no changes.
+
+new2.php
+
+1. function renderForm
+
+"renderForm" that generates an HTML form for creating a new record. The function takes several parameters which is title, picture, genre, quantity, years, availability, and error message if there is.It contains input fields for the various record attributes and a submit button.
+
+2.  (isset($_POST['submit'])), 
+
+the script processes the form data and saves it to the database.being sanitized with mysql_real_escape_string and htmlspecialchars functions.
+
+2.1
+mysql_real_escape_string 
+
+Used to escape special characters in a string before inserting or using it in a MySQL query to avoid injection.
+
+2.2
+htmlspecialchars 
+
+Used to convert special characters to their corresponding HTML entities

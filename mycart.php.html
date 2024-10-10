@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+    <body background="background.jpg">
+        <style>
+
+            .black_bar{
+                background-color: black;
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                text-align: center;
+                border-radius: 10px;
+            }
+
+            .navlogo{
+                width: 80px;
+                height: auto;
+                margin-left: 30px;
+                cursor: pointer;
+            }
+
+            .navlogo:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+                transition: all 0.4s;
+            }
+
+            .pixellogo2{
+                width: 260px;
+                height: auto;
+                display: inline-block;
+                margin: auto;
+                cursor: pointer;
+            }
+
+            .pixellogo2:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+                transition: all 0.4s;
+            }
+
+            .search{
+                width: 60px;
+                height: auto;
+                cursor: pointer;
+            }
+
+            .search:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+                transition: all 0.4s;
+            }
+
+            .cartlogo{
+                width: 80px;
+                height: auto;
+                margin-right: 1px;
+                cursor: pointer;
+                padding-left: 10px;
+            }
+
+            .cartlogo:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+                transition: all 0.4s;
+            }
+
+            .icon{
+                border-spacing: 15px;
+                
+            }
+
+            .cart{
+                background-color: white;
+                color: black;
+                font-family:fantasy, copperplate;
+                letter-spacing: 10px;
+                font-size: 15px;
+                border-radius: 18px;
+                width: 40vh;
+                padding-left: 20px;
+                outline: 13px solid black;
+            }
+
+            .color{
+                background-color: #11378A;
+                color: white;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                border-radius: 10px;
+            }
+            .font{
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                background: lightgrey;
+                border-radius: 10px;
+            }
+            .menusystem
+            {
+                width:1180px;
+                height:20px;
+                
+            }
+            a
+            {
+                display:inline-block;
+                height:20px;
+                width:220px;
+                text-align:center;
+                
+            }
+            .pay
+            {
+                padding-top:5px;
+                color:white;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                padding-left: 10px;
+                outline: solid white;
+                padding-right: 20px;
+                padding-bottom: 10px;
+                border-radius: 10px;
+            }
+            .paymeth{
+                border-radius: 8px;
+                width: 110px;
+                text-align: center;
+                margin-left: 25px;
+            }
+
+            .paybutt{
+                width: 130px;
+                font-family:fantasy, copperplate;
+                height: 40px;
+                letter-spacing: 4px;
+                border-radius: 8px;
+                color: white;
+                background-color: #F1AB3D;
+                border-color: white;
+            }
+
+            .paybutt:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+                transition: all 0.4s;
+                color: black;
+                background-color: white;
+            }
+        </style>
+        
+        
+        <div class="black_bar">
+            <img src="navbar.jpg" class="navlogo">
+            <img src="pixellogo2.jpg" class="pixellogo2">
+            <img src="search.jpg" class="search">
+            <img src="cart.jpg" class="cartlogo">
+        </div>    
+        
+        <br>
+        <CENTER>
+        <table>
+            <tr align="center">
+                <td width=10000px height=50px class="cart" ><h1>MY CART</h1></td>
+            </tr>
+        </table><br>
+        
+        <table border="0px" class="icon">
+            <tr align="center">
+                    <td width="300px" height="400px"class="color">GAME ICON</td>
+                    <td width="300px" class="font">GAME TITLE</td>
+                    <td width="300px" class="font">QUANTITY</td>
+                    <td width="300px" class="font">PRICE</td>
+            </tr>
+        </table><br>
+
+        <table border="0px" class="icon">
+            <tr align="center">
+                    <td width="300px" height="400px" class="color">GAME ICON</td>
+                    <td width="300px"class="font">GAME TITLE</td>
+                    <td width="300px"class="font">QUANTITY</td>
+                    <td width="300px"class="font">PRICE </td>
+            </tr>
+        </table><br>
+
+        <table border="0px" class="icon">
+            <tr align="center">
+                    <td width="300px" height="400px"class="color">GAME ICON</td>
+                    <td width="300px"class="font">GAME TITLE</td>
+                    <td width="300px"class="font">QUANTITY</td>
+                    <td width="300px"class="font">PRICE</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <p><h3 style="color: white;">( Account )</h3></p>
+        <br>
+        <table class="pay">
+        <tr><td colspan="3" align="center"><h2>PAYMENT METHOD</h2></td></tr><br>
+        <tr><td><select id="paymeth" class="paymeth">
+            <option value="ob">Online Banking</option>
+            <option value="dc" selected>Debit Card</option>
+            <option value="cc">Credit Card</option>
+            <option value="cod">Cash on Delivery</option>
+        </select>
+            </td>
+
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><button class="paybutt">PAY</button></td>
+        </tr>
+        </table>
+        <br>
+        <br>
+    </body>
+    </html>
